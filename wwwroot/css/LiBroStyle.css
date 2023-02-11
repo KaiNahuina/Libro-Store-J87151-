@@ -1,0 +1,64 @@
+﻿html, body, header, footer {
+    background-color: #98ebb5;
+}
+
+header, footer {
+    text-align: center;
+}
+
+header {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background-color: lightgrey;
+    margin-top: 500px;
+    margin-bottom: 0px;
+}
+
+
+left-align {
+    text-align: left;
+}
+
+center {
+    text-align: center
+}
+
+.navbar {
+    background-color: lightgrey;
+    overflow: hidden;
+}
+
+
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+    }
+
+        .navbar a:hover {
+            background-color: slategray;
+            color: white;
+        }
+
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+login-button {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+submit {
+    width: 150px;
+}

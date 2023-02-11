@@ -1,0 +1,44 @@
+﻿@page
+@model Libro_Store.Pages.Create.CreateModel
+@{
+}
+
+
+
+<form method="post" enctype="multipart/form-data">
+    <div class="border p-3 mt-4">
+
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3 center">Create Category</h2>
+            <hr/>
+        </div>
+
+        <div class="mb-3 left-align">
+            <label asp-for="@Model.Books.Title" class="font-weight-bold"></label>
+            <input asp-for="@Model.Books.Title" class="form-control" name="BookTitle"/>
+        </div>
+
+        <div class="mb-3 left-align">
+            <label asp-for="@Model.Books.Author" class="font-weight-bold"></label>
+            <input asp-for="@Model.Books.Author" class="form-control" name="BookAuthor"/>
+        </div>
+
+        <div class="mb-3 left-align">
+            <label asp-for="@Model.Books.Price" class="font-weight-bold"></label>
+            <input asp-for="@Model.Books.Price" class="form-control" name="BookPrice"/>
+        </div>
+
+        <div class="mb-3 left-align">
+            <label asp-for="@Model.Books.Description" class="font-weight-bold"></label>
+            <input asp-for="@Model.Books.Description" class="form-control" name="BookDescription"/>
+        </div>
+
+        <div class="mb-3 left-align">
+            <label asp-for="@Model.Books.ImageData" class="font-weight-bold"></label>
+            <input asp-for="@Model.Books.ImageData" type="file" class="form-control" alt="Choose a file" multiple="multiple" name="BookImage"/>
+        </div>
+
+        <button type="submit" class="btn-primary">Submit</button>
+
+    </div>
+</form>

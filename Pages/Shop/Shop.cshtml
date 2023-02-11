@@ -1,0 +1,87 @@
+﻿@page
+@model Libro_Store.Pages.Shop.ShopModel
+@{
+}
+
+
+<header>
+    <div class="row pt-4">
+        <div class="col-4">
+            <h1>Books</h1>
+        </div>
+    </div>
+    <div class="row pt-4">
+            <div class="col-8">
+               <h2>Search our selection of books with something for everyone!</h2>
+
+            </div>
+            <div class= "col-4">
+            <a asp-page="/Create/Create" class="btn btn-primary">
+                Donate a book!
+            </a>
+            </div>
+
+     </div>
+
+
+        
+        
+    
+</header>
+
+<div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Image
+                </th>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Author
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Description
+                </th>
+                
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach(var obj in Model.Books)
+            {
+        
+            <tr>
+                <td width="20%">@obj.ImageData</td>
+                    @{
+                        try
+                        {
+                            <td>
+                            <img src="@string.Format("data:image/jpg;base64,{0}", Convert.ToBase64String(obj.ImageData))" alt="Image" />
+                            </td>
+                        }
+                        catch
+                        {
+                            <td>
+                            <img src="/Images/Empty.jpg" alt="No Image Submitted"/>
+                            </td>
+                        }
+                    }
+                <td width="20%">@obj.Title</td>
+                <td width="20%">@obj.Author</td>
+                <td width="20%">@obj.Price</td>
+                <td width="20%">@obj.Description</td>
+            </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+
+</div>
