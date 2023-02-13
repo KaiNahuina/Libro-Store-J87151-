@@ -13,6 +13,8 @@ namespace Libro_Store.Pages.Shop
     public class ShopModel : PageModel
     {
         private readonly AppDbContext _db;
+
+        //Books is an instance of type Libros
         public IEnumerable<Libros> Books { get; set; }
 
         public ShopModel(AppDbContext db)
@@ -23,7 +25,6 @@ namespace Libro_Store.Pages.Shop
 
         [BindProperty]
         public string Search { get; set; }
-
         public IList<Libros> Libros { get; set; } = default!;
 
         public void OnGet()

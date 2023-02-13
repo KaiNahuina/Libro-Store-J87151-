@@ -8,7 +8,7 @@ namespace Libro_Store.Data
         {
 
         }
-
+        //Libros is nameof of db
         public DbSet<Libros> Libros { get; set; }
     }
 }

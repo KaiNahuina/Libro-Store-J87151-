@@ -9,6 +9,7 @@ namespace Libro_Store.Data
         {
             [Key]
             public string Title { get; set; }
+            [Required]
             public string Author { get; set; }
 
             [DataType(DataType.Currency)]
