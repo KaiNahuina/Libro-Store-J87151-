@@ -15,7 +15,7 @@ namespace Libro_Store.Pages.Create
     {
         private readonly AppDbContext _db;
         [BindProperty]
-        public Libros Books { get; set; }
+        public Libros Book { get; set; }
 
         public CreateModel(AppDbContext db)
         {
@@ -26,7 +26,7 @@ namespace Libro_Store.Pages.Create
 
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPost()
         {
             if (!ModelState.IsValid) { return Page(); }
             //Books.Active = true;
@@ -34,15 +34,15 @@ namespace Libro_Store.Pages.Create
             {
                 MemoryStream ms = new MemoryStream();
                 file.CopyTo(ms);
-                Books.ImageData = ms.ToArray();
+                Book.ImageData = ms.ToArray();
 
                 ms.Close();
                 ms.Dispose();
             }
 
-            await _db.Libros.AddAsync(Books);
+            await _db.Libros.AddAsync(Book);
             await _db.SaveChangesAsync();
-            return RedirectToPage("/Create/Create");
+            return RedirectToPage("/Shop/Shop");
         }
     }
 }

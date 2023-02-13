@@ -14,28 +14,28 @@
         </div>
 
         <div class="mb-3 left-align">
-            <label asp-for="@Model.Books.Title" class="font-weight-bold"></label>
-            <input asp-for="@Model.Books.Title" class="form-control" name="BookTitle"/>
+            <label asp-for="Book.Title" class="font-weight-bold"></label>
+            <input asp-for="Book.Title" class="form-control"/>
         </div>
 
         <div class="mb-3 left-align">
-            <label asp-for="@Model.Books.Author" class="font-weight-bold"></label>
-            <input asp-for="@Model.Books.Author" class="form-control" name="BookAuthor"/>
+            <label asp-for="Book.Author" class="font-weight-bold"></label>
+            <input asp-for="Book.Author" class="form-control"/>
         </div>
 
         <div class="mb-3 left-align">
-            <label asp-for="@Model.Books.Price" class="font-weight-bold"></label>
-            <input asp-for="@Model.Books.Price" class="form-control" name="BookPrice"/>
+            <label asp-for="Book.Price" class="font-weight-bold"></label>
+            <input asp-for="Book.Price" class="form-control"/>
         </div>
 
         <div class="mb-3 left-align">
-            <label asp-for="@Model.Books.Description" class="font-weight-bold"></label>
-            <input asp-for="@Model.Books.Description" class="form-control" name="BookDescription"/>
+            <label asp-for="Book.Description" class="font-weight-bold"></label>
+            <input asp-for="Book.Description" class="form-control"/>
         </div>
 
         <div class="mb-3 left-align">
-            <label asp-for="@Model.Books.ImageData" class="font-weight-bold"></label>
-            <input asp-for="@Model.Books.ImageData" type="file" class="form-control" alt="Choose a file" multiple="multiple" name="BookImage"/>
+            <label asp-for="Book.ImageData" class="font-weight-bold"></label>
+            <input asp-for="Book.ImageData" type="file" class="form-control" alt="Choose a file" multiple="multiple"/>
         </div>
 
         <button type="submit" class="btn-primary">Submit</button>
