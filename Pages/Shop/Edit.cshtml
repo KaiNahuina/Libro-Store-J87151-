@@ -1,5 +1,5 @@
 ﻿@page
-@model Libro_Store.Pages.Shop.ShopModel
+@model Libro_Store.Pages.Shop.EditModel
 @{
 }
 
@@ -56,7 +56,7 @@
                 <th>
                     Description
                 </th>
-                <th></th>
+                
             </tr>
         </thead>
 
@@ -84,12 +84,6 @@
                 <td width="20%">@obj.Author</td>
                 <td width="20%">@obj.Price</td>
                 <td width="20%">@obj.Description</td>
-                <td>
-                    <div class="w-75 btn-group" role="group">
-                    <a asp-page="Edit" asp-route-id="@obj.Title" class="btn btn-primary mx-2">Edit</a>
-                    <a asp-page="Delete" class="btn btn-primary mx-2">Delete</a>
-                    </div>
-                </td>
             </tr>
             }
 
